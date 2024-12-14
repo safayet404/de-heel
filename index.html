@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deheel</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="relative">
+  <!-- Header -->
+  <header id="navbar" class="bg-gray-800 bg-opacity-70 text-white fixed w-full top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="\assets\Shoes.png" alt="Logo" class="w-[129px] h-[39px] object-contain mr-3">
+      </div>
+
+      <!-- Menu (Desktop) -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-gray-300">Home</a>
+        <a href="#service" class="hover:text-gray-300">Service</a>
+        <a href="#blog" class="hover:text-gray-300">Blog</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </nav>
+
+      <!-- Icons and Hamburger -->
+      <div class="flex items-center space-x-4">
+        <button class="hover:text-gray-300">
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <button class="hover:text-gray-300">
+          <i class="fa-solid fa-phone"></i>
+        </button>
+        <button id="menu-toggle" class="md:hidden hover:text-gray-300 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <!-- Sliding Menu Drawer -->
+  <div id="menu-drawer" class="fixed right-0 w-64 bg-gray-800 bg-opacity-70 transform translate-x-full transition-transform duration-300 ease-in-out z-50 rounded-tl-lg rounded-bl-lg">
+    <div class="p-4 text-white">
+      <button id="menu-close" class="hover:text-gray-300 focus:outline-none mb-4">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+      <nav class="flex flex-col space-y-4">
+        <a href="#home" class="hover:text-gray-300">Home</a>
+        <a href="#service" class="hover:text-gray-300">Service</a>
+        <a href="#blog" class="hover:text-gray-300">Blog</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <section class="relative">
+    <div id="carousel" class="relative w-full h-[704px] overflow-hidden">
+      <div class="flex transition-transform duration-700 ease-in-out" id="carousel-images">
+        <img src="https://picsum.photos/1920/704?random=1" alt="Desktop Image 1" class="hidden md:block w-full h-full object-cover">
+        <img src="https://picsum.photos/768/704?random=1" alt="Mobile Image 1" class="block md:hidden w-full h-full object-cover">
+        <img src="https://picsum.photos/1920/704?random=2" alt="Desktop Image 2" class="hidden md:block w-full h-full object-cover">
+        <img src="https://picsum.photos/768/704?random=2" alt="Mobile Image 2" class="block md:hidden w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto p-4">
+    <p>Welcome to the responsive website.</p>
+  </main>
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2024 My Website</p>
+  </footer>
+
+  <!-- Custom Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const menuDrawer = document.getElementById('menu-drawer');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const navbar = document.getElementById('navbar');
+
+    // Adjust drawer position below the navbar
+    const adjustDrawerPosition = () => {
+      const navbarHeight = navbar.offsetHeight;
+      menuDrawer.style.top = `${navbarHeight}px`;
+    };
+
+    window.addEventListener('resize', adjustDrawerPosition);
+    window.addEventListener('load', adjustDrawerPosition);
+
+    // Open Drawer
+    menuToggle.addEventListener('click', () => {
+      menuDrawer.classList.remove('translate-x-full');
+      menuOverlay.classList.remove('hidden');
+    });
+
+    // Close Drawer on Close Button or Overlay Click
+    const closeDrawer = () => {
+      menuDrawer.classList.add('translate-x-full');
+      menuOverlay.classList.add('hidden');
+    };
+
+    menuClose.addEventListener('click', closeDrawer);
+    menuOverlay.addEventListener('click', closeDrawer);
+  </script>
+</body>
+</html>
