@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deheel</title>
+  <title>De Heel</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
@@ -19,11 +19,13 @@
       </div>
 
       <!-- Menu (Desktop) -->
-      <nav class="hidden md:flex space-x-6">
-        <a href="#home" class="hover:text-gray-300">Home</a>
-        <a href="#service" class="hover:text-gray-300">Service</a>
-        <a href="#blog" class="hover:text-gray-300">Blog</a>
-        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      <nav class="hidden md:flex space-x-6 uppercase">
+        <a href="#home" class="hover:text-gray-300 ">Home</a>
+        <a href="#service" class="hover:text-gray-300">About US</a>
+        <a href="#service" class="hover:text-gray-300">Complance</a>
+        <a href="#service" class="hover:text-gray-300">Products</a>
+        <a href="#service" class="hover:text-gray-300">Blog</a>
+        <a href="#service" class="hover:text-gray-300">Contact Us</a>
       </nav>
 
       <!-- Icons and Hamburger -->
@@ -53,35 +55,281 @@
         <i class="fa-solid fa-xmark text-xl"></i>
       </button>
       <nav class="flex flex-col space-y-4">
-        <a href="#home" class="hover:text-gray-300">Home</a>
-        <a href="#service" class="hover:text-gray-300">Service</a>
-        <a href="#blog" class="hover:text-gray-300">Blog</a>
-        <a href="#contact" class="hover:text-gray-300">Contact</a>
-        <a href="#contact" class="hover:text-gray-300">Contact</a>
+        <a href="#home" class="hover:text-gray-300 ">Home</a>
+        <a href="#service" class="hover:text-gray-300">About US</a>
+        <a href="#service" class="hover:text-gray-300">Complance</a>
+        <a href="#service" class="hover:text-gray-300">Products</a>
+        <a href="#service" class="hover:text-gray-300">Blog</a>
+        <a href="#service" class="hover:text-gray-300">Contact Us</a>
       </nav>
     </div>
   </div>
 
-  <!-- Carousel -->
-  <section class="relative">
-    <div id="carousel" class="relative w-full h-[704px] overflow-hidden">
-      <div class="flex transition-transform duration-700 ease-in-out" id="carousel-images">
-        <img src="https://picsum.photos/1920/704?random=1" alt="Desktop Image 1" class="hidden md:block w-full h-full object-cover">
-        <img src="https://picsum.photos/768/704?random=1" alt="Mobile Image 1" class="block md:hidden w-full h-full object-cover">
-        <img src="https://picsum.photos/1920/704?random=2" alt="Desktop Image 2" class="hidden md:block w-full h-full object-cover">
-        <img src="https://picsum.photos/768/704?random=2" alt="Mobile Image 2" class="block md:hidden w-full h-full object-cover">
+  <!-- Banner -->
+  <section class="relative bg-cover bg-center h-auto bg-[url(./assets/bg.png)]">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="relative z-10  flex flex-col  justify-start max-w-[1500px]  mx-auto text-white h-full space-y-6 px-4">
+      <h2 class="text-3xl md:text-5xl font-bold uppercase mt-[150px]">SHOES LTD</h2>
+      <p class="max-w-3xl leading-loose text-lg md:text-base">
+        100% EXPORT ORIENTED QUALITY SHOE MANUFACTURING INDUSTRY IN BANGLADESH
+        EXPORT TO FRANCE, SPAIN, BRAZIL, JAPAN AND OTHER EU COUNTRIES.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl w-full mt-6 mb-5 ">
+        <div class="flex flex-col mb-10 p-6 bg-green-50 rounded-lg shadow-lg">
+          <p class="text-gray-800 text-center font-semibold">
+            Fixed an appointment for live factory visit via video conference
+          </p>
+        <img src="./assets/gp1.png" class="w-[80px] mt-5 h-[80px] mx-auto"  />
+        </div>
+        <div class="flex flex-col mb-10 p-6 bg-green-50 rounded-lg shadow-lg">
+          <p class="text-gray-800 text-center font-semibold">
+            Fixed an appointment for live factory visit via video conference
+          </p>
+        <img src="./assets/gp2.png" class="w-[80px] mt-5 h-[80px] mx-auto"  />
+        </div>
+        <div class="flex flex-col mb-10 p-6 bg-green-50 rounded-lg shadow-lg">
+          <p class="text-gray-800 text-center font-semibold">
+            Fixed an appointment for live factory visit via video conference
+          </p>
+        <img src="./assets/gp3.png" class="w-[80px] mt-5 h-[80px] mx-auto"  />
+        </div>
       </div>
+
     </div>
+    <!-- <div class="p-8 text-white max-w-[1400px] mx-auto  ">
+      <h1 class="mt-[200px] font-bold text-5xl">SHOES LTD</h1>
+      <p>Additional content will ensure the section grows in height.</p>
+    </div> -->
   </section>
 
-  <main class="container mx-auto p-4">
-    <p>Welcome to the responsive website.</p>
+  <main class="mx-auto p-4">
+
+    <!-- Category -->
+    <div class="max-w-[1400px] mx-auto justify-center items-center">
+      <h1 class="text-4xl font-bold text-center mt-5">Category</h1>
+
+      <!-- Leather -->
+      <p class="text-3xl mb-5">Lather <i class="fa fa-arrow-down"></i> </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex flex-col items-center bg-gray-50 rounded-sm shadow-lg">
+          <img src="./assets/shoe.png" alt="lather-shoes" class="w-full object-cover"/>
+
+          <div class="grid grid-cols-10 w-full">
+            <div class="col-span-8 flex bg-[#D3E6D8] p-5">
+              <p class="text-center  text-3xl font-semibold text-gray-800">Man</p>
+            </div>
+            <div class="col-span-2 flex  items-center justify-center bg-[#7AC47E] p-5">
+              <button >
+                <i class="fa-solid text-center fa-arrow-right"></i>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        <div class="flex flex-col items-center bg-gray-50 rounded-sm shadow-lg">
+          <img src="./assets/shoe.png" alt="lather-shoes" class="w-full object-cover"/>
+
+          <div class="grid grid-cols-10 w-full">
+            <div class="col-span-8 flex bg-[#D3E6D8] p-5">
+              <p class="text-center  text-3xl font-semibold text-gray-800">Woman</p>
+            </div>
+            <div class="col-span-2 flex  items-center justify-center bg-[#7AC47E] p-5">
+              <button >
+                <i class="fa-solid text-center fa-arrow-right"></i>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        <div class="flex flex-col items-center bg-gray-50 rounded-sm shadow-lg">
+          <img src="./assets/shoe.png" alt="lather-shoes" class="w-full object-cover"/>
+
+          <div class="grid grid-cols-10 w-full">
+            <div class="col-span-8 flex bg-[#D3E6D8] p-5">
+              <p class="text-center  text-3xl font-semibold text-gray-800">Kids</p>
+            </div>
+            <div class="col-span-2 flex  items-center justify-center bg-[#7AC47E] p-5">
+              <button >
+                <i class="fa-solid text-center fa-arrow-right"></i>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        
+
+      </div>
+      <!-- Non Leather -->
+      <p class="text-3xl mt-10 mb-5"> Non Lather <i class="fa fa-arrow-down"></i> </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex flex-col items-center bg-gray-50 rounded-sm shadow-lg">
+          <img src="./assets/shoe.png" alt="lather-shoes" class="w-full object-cover"/>
+
+          <div class="grid grid-cols-10 w-full">
+            <div class="col-span-8 flex bg-[#D3E6D8] p-5">
+              <p class="text-center  text-3xl font-semibold text-gray-800">Man</p>
+            </div>
+            <div class="col-span-2 flex  items-center justify-center bg-[#7AC47E] p-5">
+              <button >
+                <i class="fa-solid text-center fa-arrow-right"></i>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        <div class="flex flex-col items-center bg-gray-50 rounded-sm shadow-lg">
+          <img src="./assets/shoe.png" alt="lather-shoes" class="w-full object-cover"/>
+
+          <div class="grid grid-cols-10 w-full">
+            <div class="col-span-8 flex bg-[#D3E6D8] p-5">
+              <p class="text-center  text-3xl font-semibold text-gray-800">Woman</p>
+            </div>
+            <div class="col-span-2 flex  items-center justify-center bg-[#7AC47E] p-5">
+              <button >
+                <i class="fa-solid text-center fa-arrow-right"></i>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        <div class="flex flex-col items-center bg-gray-50 rounded-sm shadow-lg">
+          <img src="./assets/shoe.png" alt="lather-shoes" class="w-full object-cover"/>
+
+          <div class="grid grid-cols-10 w-full">
+            <div class="col-span-8 flex bg-[#D3E6D8] p-5">
+              <p class="text-center  text-3xl font-semibold text-gray-800">Kids</p>
+            </div>
+            <div class="col-span-2 flex  items-center justify-center bg-[#7AC47E] p-5">
+              <button >
+                <i class="fa-solid text-center fa-arrow-right"></i>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+        
+
+      </div>
+     
+    </div>
+
+    <!-- Latest Product -->
+
+    <div class="py-10 max-w-[1400px] mx-auto">
+      <h2 class="text-4xl font-bold mb-8">Latest Product</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card 1 -->
+        <div class="rounded-lg shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+            <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+          </div>
+          <div class="p-4 bg-[#D3E6D8]">
+            <h3 class="text-lg font-semibold">Man shoes</h3>
+            <div class="flex justify-between relative">
+              
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+              <button class="text-green-500 absolute top-[-60px] right-0">
+                <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+          <!-- Product Card 2 -->
+        <div class="rounded-lg shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+            <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+          </div>
+          <div class="p-4 bg-[#D3E6D8]">
+            <h3 class="text-lg font-semibold">Man shoes</h3>
+            <div class="flex justify-between relative">
+              
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+              <button class="text-green-500 absolute top-[-60px] right-0">
+                <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+          <!-- Product Card 3 -->
+        <div class="rounded-lg shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+            <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+          </div>
+          <div class="p-4 bg-[#D3E6D8]">
+            <h3 class="text-lg font-semibold">Man shoes</h3>
+            <div class="flex justify-between relative">
+              
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+              <button class="text-green-500 absolute top-[-60px] right-0">
+                <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+          <!-- Product Card 4 -->
+        <div class="rounded-lg shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+            <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+          </div>
+          <div class="p-4 bg-[#D3E6D8]">
+            <h3 class="text-lg font-semibold">Man shoes</h3>
+            <div class="flex justify-between relative">
+              
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+              <button class="text-green-500 absolute top-[-60px] right-0">
+                <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+              </button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="py-10 max-w-[1400px] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div >
+          <h1 class="text-center mt-5 font-bold text-3xl mb-3">About Us</h1>
+          <p class="leading-loose text-center">FB Footwear Limited is 100% Export oriented footwear manufacturing Company. 
+            FB Footwear inaugurated its journey on 2006 using European-origin machinery and technical know-how. 
+            A widely spaced factory  complying with up-to-date international specification, world class factory system with own power.</p>
+        </div>
+
+        <div>
+          <img src="./assets/factory.png" class="" />
+        </div>
+      </div>
+    </div>
+    
+
   </main>
   <footer class="bg-gray-800 text-white p-4 text-center">
     <p>&copy; 2024 My Website</p>
   </footer>
 
   <!-- Custom Scripts -->
+
+
+ 
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
