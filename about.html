@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Heel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="relative">
+    <!-- Header -->
+    <header id="navbar" class="bg-gray-800 bg-opacity-70 text-white fixed w-full top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="\assets\Shoes.png" alt="Logo" class="w-[129px] h-[39px] object-contain mr-3">
+            </div>
+
+            <!-- Menu (Desktop) -->
+            <nav class="hidden md:flex space-x-6 uppercase">
+                <a href="#home" class="hover:text-gray-300 ">Home</a>
+                <a href="#service" class="hover:text-gray-300">About US</a>
+                <a href="#service" class="hover:text-gray-300">Complance</a>
+                <a href="#service" class="hover:text-gray-300">Products</a>
+                <a href="#service" class="hover:text-gray-300">Blog</a>
+                <a href="#service" class="hover:text-gray-300">Contact Us</a>
+            </nav>
+
+            <!-- Icons and Hamburger -->
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-gray-300">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <button class="hover:text-gray-300">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+                <button id="menu-toggle" class="md:hidden hover:text-gray-300 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+    <!-- Sliding Menu Drawer -->
+    <div id="menu-drawer"
+        class="fixed right-0 w-64 bg-gray-800 bg-opacity-70 transform translate-x-full transition-transform duration-300 ease-in-out z-50 rounded-tl-lg rounded-bl-lg">
+        <div class="p-4 text-white">
+            <button id="menu-close" class="hover:text-gray-300 focus:outline-none mb-4">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <nav class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-gray-300 ">Home</a>
+                <a href="#service" class="hover:text-gray-300">About US</a>
+                <a href="#service" class="hover:text-gray-300">Complance</a>
+                <a href="#service" class="hover:text-gray-300">Products</a>
+                <a href="#service" class="hover:text-gray-300">Blog</a>
+                <a href="#service" class="hover:text-gray-300">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <section class="relative bg-cover bg-center h-[700px] bg-[url(./assets/about.png)]">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div
+            class="relative z-10  flex flex-col  justify-start max-w-[1500px]  mx-auto text-white h-full space-y-6 px-4">
+            <h2 class="text-3xl md:text-5xl font-bold uppercase mt-[250px] mx-auto ">About us</h2>
+            <p class="max-w-3xl leading-loose text-sm md:text-sm text-center mx-auto mb-48">
+                100% EXPORT ORIENTED QUALITY SHOË MANUFACTURING INDUSTRY IN BANGLADESH Export to FRANCE, SPAIN, BRAZIL,
+                JAPAN and other EU countries.
+            </p>
+
+        </div>
+
+    </section>
+
+    <main class="mx-auto p-4">
+
+        <!-- About Shoes -->
+        <div class="py-10 max-w-[1400px] mx-auto">
+            <h1 class="font-bold text-5xl text-center">SHOES LTD </h1>
+            <p class="mt-5 w-2/3 leading-loose text-center text-xs lg:leading-loose lg:text-base mx-auto">Our experience started with our old unit SAVAR
+                INDUSTRY (PVT) LTD. established in the year of 1992 and located at Dhaka EPZ.
+                The new giant shoe project AKIJ FOOTWEAR LTD. was incorporated in 2005 and located very near (20 KM) to
+                the Shahajalal International Airport.
+                The Iron-structured modern project is established in a 300,000 SQF land area with 50,000 SQF actual
+                working space and well-equipped with brand
+                new machineries from Italy and Germany. Our both shoe industries are supported by our own world class
+                tannery namely SAF INDUSTRIES LTD.
+                which is rated one of the best Leather Processing Industry in ASIA for Finished Cow Calf Leather running
+                from1960.</p>
+        </div>
+        <!--Factory Section -->
+        <div class="py-10 max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+
+                <div>
+                    <img src="./assets/factory3.png" class="mx-auto w-3/4 h-auto" />
+                </div>
+
+                <div>
+                    <h1 class="text-center sm:mt-0 lg:mt-10 font-bold text-5xl mb-5">Factory Details</h1>
+                    <p class="leading-loose text-xs text-center lg:leading-loose lg:text-base">Our experience started with our old unit SAVAR INDUSTRY (PVT)
+                        LTD.
+                        established in the year of 1992 and located at Dhaka EPZ. The new giant shoe project AKIJ
+                        FOOTWEAR LTD.
+                        was incorporated in 2005 and located very near (20 KM) to the Shahajalal International Airport.
+                        The Iron-structured modern project is established in a 300,000 SQF land area with 50,000 SQF
+                        actual working
+                        space and well-equipped with brand new machineries from Italy and Germany. Our both shoe
+                        industries are
+                        supported by our own world class tannery namely SAF INDUSTRIES LTD. which is rated one of the
+                        best Leather Processing Industry in ASIA for Finished Cow Calf Leather running from1960.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Video Section -->
+
+    <section class="py-10 w-full relative bg-cover bg-center h-[456px] bg-[url(./assets/bg.png)]">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Centered Button -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <button data-dialog-target="modal"
+                class="rounded-md py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:shadow-lg active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2">
+                <img src="./assets/video.png" alt="Play Video" />
+            </button>
+        </div>
+
+        <!-- Modal Backdrop -->
+        <div data-dialog-backdrop="modal" data-dialog-backdrop-close="true"
+            class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+            <div data-dialog="modal"
+                class="relative m-4 p-4 w-full sm:w-2/3 md:w-2/5 lg:w-2/5 min-w-[40%] max-w-[90%] rounded-lg bg-white shadow-sm">
+
+                <!-- Video Embed -->
+                <div>
+                    <iframe width="100%" height="315"
+                        src="https://www.youtube.com/embed/kkHoltKy7ec?si=YFXQtlTvlLCapgC9" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Close Button -->
+                <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+                    <button data-dialog-close="true"
+                        class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all bg-slate-800 text-white hover:text-gray-400 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        type="button">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chairman -->
+
+    <section class="py-10 max-w-[1400px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <div>
+                <h1 class="text-center sm:mt-0 lg:mt-20 font-bold text-5xl mb-5 uppercase">Chairman</h1>
+                <p class="leading-loose text-xs text-center lg:leading-loose lg:text-xs">Our experience started with our old unit SAVAR INDUSTRY (PVT) LTD.  
+                    established in the year of 1992 and located at Dhaka EPZ. The new giant shoe project AKIJ FOOTWEAR LTD. was incorporated in 2005 and located
+                     very near (20 KM) to the Shahajalal International Airport. The Iron-structured modern project is established in a 300,000 SQF land area 
+                     with 50,000 SQF actual working space and well-equipped with brand new machineries from Italy and Germany.  Our both shoe industries are 
+                     supported by our own world class tannery namely SAF INDUSTRIES LTD.
+                     which is rated one of the best Leather Processing Industry in ASIA for Finished Cow Calf Leather running from1960.</p>
+
+               
+            </div>
+            <div>
+                <img src="./assets/chairman.png" class="mx-auto w-3/4 h-auto rounded-lg shadow-md" />
+            </div>
+
+         
+        </div>
+    </section>
+
+    <!-- Chairman -->
+
+    <section class="py-10 max-w-[1400px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <img src="./assets/chairman.png" class="mx-auto w-3/4 h-auto rounded-lg shadow-md" />
+            </div>
+
+            <div>
+                <h1 class="text-center sm:mt-0 lg:mt-20 font-bold text-5xl mb-5 uppercase">Chairman</h1>
+                <p class="leading-loose text-xs text-center lg:leading-loose lg:text-xs">Our experience started with our old unit SAVAR INDUSTRY (PVT) LTD.  
+                    established in the year of 1992 and located at Dhaka EPZ. The new giant shoe project AKIJ FOOTWEAR LTD. was incorporated in 2005 and located
+                     very near (20 KM) to the Shahajalal International Airport. The Iron-structured modern project is established in a 300,000 SQF land area 
+                     with 50,000 SQF actual working space and well-equipped with brand new machineries from Italy and Germany.  Our both shoe industries are 
+                     supported by our own world class tannery namely SAF INDUSTRIES LTD.
+                     which is rated one of the best Leather Processing Industry in ASIA for Finished Cow Calf Leather running from1960.</p>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+
+    <section class="py-10 max-w-[1400px] mx-auto">
+        <h1 class="font-bold text-5xl text-center mb-10">OUR TEAM </h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5">
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            <div class="mx-auto">
+                <img src="./assets/man.png" alt="man" class="w-full h-auto"  />
+                <h1 class="font-bold text-black mt-3">Ariyan Khan</h1>
+                <p class="text-gray-600 text-xs">CEO & Founder</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+
+    <section class="py-10 max-w-[1400px] mx-auto p-8">
+        <h1 class="font-bold text-5xl text-center mb-10">MISSION & VISION </h1>
+        <div class="grid grid-cols-12 mx-auto">
+            <div class="col-span-12 lg:col-span-8 md:col-span-8 space-y-3 mt-5 mx-auto">
+                <div class="space-x-2">
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+                <div class="space-x-2">
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+                <div class="space-x-2"> 
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+                <div class="space-x-2">
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+                <div class="space-x-2">
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+                <div class="space-x-2">
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+                <div class="space-x-2">
+                    <span class="bg-[#59B55E] h-3 w-3 rounded-full inline-block"></span>
+                    <span>Our experience started with our old unit SAVAR INDUSTRY</span>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-4 md:col-span-4 mx-auto mt-5">
+                <img src="./assets/mission.png" class="w-full h-auto" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#1E1E1E] text-white py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1400px] p-5 space-y-5 mx-auto">
+            <div class="mx-auto  w-full">
+                <h1 class="text-4xl font-bold mt-5 tracking-widest">SHOES</h1>
+                <p class="w-[70%] leading-loose mt-5">The proper Footer on proper time can preserve you protection. We
+                    assist you make sureeverybody forward.</p>
+
+                <ul class="flex  flex-row gap-5 mt-5">
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/fb.png" /></a> </li>
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/twitter.png" /></a> </li>
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/instagram.png" /></a> </li>
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/youtube.png" /></a> </li>
+                </ul>
+            </div>
+
+            <div class="md:mx-auto">
+                <h1 class="font-semibold text-3xl">Quick Link</h1>
+                <ul class="mt-5 space-y-3">
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Home </a> </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> About US </a>
+                    </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Complance </a>
+                    </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Products </a>
+                    </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Blog </a> </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Contact </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto w-full">
+                <h1 class="font-semibold text-4xl">Recent News</h1>
+                <div class="grid grid-cols-12 gap-5 mt-5">
+                    <div class="col-span-4">
+                        <img src="./assets/meeting.png" class="rounded-lg shadow-md" />
+                    </div>
+                    <div class="col-span-8">
+                        <h1 class="font-bold text-2xl">People saying about footer.</h1>
+                        <p class="mt-2">8 Nov, 2021</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-5 mt-5">
+                    <div class="col-span-4">
+                        <img src="./assets/meeting.png" class="rounded-lg shadow-md" />
+                    </div>
+                    <div class="col-span-8">
+                        <h1 class="font-bold text-2xl">People saying about footer.</h1>
+                        <p class="mt-2">8 Nov, 2021</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-gray-600 border-t-2 mt-5 mb-3 w-full" />
+        <p class="text-center mx-auto">&copy; 2023 All rights reserved</p>
+    </footer>
+
+    <!-- Custom Scripts -->
+
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const menuDrawer = document.getElementById('menu-drawer');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const navbar = document.getElementById('navbar');
+
+        // Adjust drawer position below the navbar
+        const adjustDrawerPosition = () => {
+            const navbarHeight = navbar.offsetHeight;
+            menuDrawer.style.top = `${navbarHeight}px`;
+        };
+
+        window.addEventListener('resize', adjustDrawerPosition);
+        window.addEventListener('load', adjustDrawerPosition);
+
+        // Open Drawer
+        menuToggle.addEventListener('click', () => {
+            menuDrawer.classList.remove('translate-x-full');
+            menuOverlay.classList.remove('hidden');
+        });
+
+        // Close Drawer on Close Button or Overlay Click
+        const closeDrawer = () => {
+            menuDrawer.classList.add('translate-x-full');
+            menuOverlay.classList.add('hidden');
+        };
+
+        menuClose.addEventListener('click', closeDrawer);
+        menuOverlay.addEventListener('click', closeDrawer);
+
+
+        // Handle opening the modal
+        document.querySelectorAll('[data-dialog-target]').forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-dialog-target');
+                const backdrop = document.querySelector(`[data-dialog-backdrop="${modalId}"]`);
+                if (backdrop) {
+                    backdrop.classList.remove('pointer-events-none', 'opacity-0');
+                    backdrop.classList.add('opacity-100', 'pointer-events-auto');
+                }
+            });
+        });
+
+        // Handle closing the modal
+        document.querySelectorAll('[data-dialog-close]').forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('[data-dialog-backdrop]');
+                if (modal) {
+                    modal.classList.add('pointer-events-none', 'opacity-0');
+                    modal.classList.remove('opacity-100', 'pointer-events-auto');
+                }
+            });
+        });
+
+        // Close modal when clicking on the backdrop
+        document.querySelectorAll('[data-dialog-backdrop-close="true"]').forEach(backdrop => {
+            backdrop.addEventListener('click', event => {
+                if (event.target === backdrop) {
+                    backdrop.classList.add('pointer-events-none', 'opacity-0');
+                    backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
