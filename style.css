@@ -5,3 +5,18 @@
 *{
     overflow: hidden;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+/* styles.css */
+
+.accordion-collapse {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: 0;
+  opacity: 0;
+}

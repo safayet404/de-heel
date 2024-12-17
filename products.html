@@ -10,6 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+/>
 </head>
 
 <body class="relative bg-white dark:bg-white">
@@ -75,44 +79,82 @@
 
     <main class="max-w-[1400px] mx-auto">
 
-        <div class="grid grid-cols-12">
-            <div class="col-span-4 flex flex-col mt-[200px] shadow-md rounded-lg mx-auto space-y-20 my-auto">
-                <!-- Dropdown Button -->
-                <div class="dropdown dropdown-bottom px-20">
-                    <button tabindex="0" class=" m-1  border-none font-semibold text-2xl text-black">Leather &gt; </button>
-                  
-                </div>
+        <div class="grid grid-cols-12 gap-10">
+            <div class="col-span-3 flex flex-col mt-[200px] shadow-md rounded-lg mx-auto space-y-20 my-auto">
+
               
-                <div class="dropdown dropdown-bottom px-20 ">
-                    <button tabindex="0" class=" m-1  border-none font-semibold text-2xl text-black">Leather &gt; </button>
-                    <ul tabindex="0" class="dropdown-content  bg-[#D3E6D8] text-black menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-bottom px-20">
-                    <button tabindex="0" class=" m-1  border-none font-semibold text-2xl text-black">Leather &gt; </button>
-                    <ul tabindex="0" class="dropdown-content  bg-[#D3E6D8] text-black menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-bottom px-20 ">
-                    <button tabindex="0" class=" m-1  border-none font-semibold text-2xl text-black">Leather &gt; </button>
-                    <ul tabindex="0" class="dropdown-content  bg-[#D3E6D8] text-black menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown dropdown-bottom px-20">
-                    <button tabindex="0" class=" m-1  border-none font-semibold text-2xl text-black">Leather &gt; </button>
-                    <ul tabindex="0" class="dropdown-content  bg-[#D3E6D8] text-black menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                    </ul>
-                </div>
+
+              <section>
+                <div class="relative flex min-h-screen flex-col  overflow-hidden  py-6 sm:py-12">
               
-             
+                  <div class="max-w-[900px] mx-auto py-20 px-4 relative z-10">
+                    <div class="accordion flex flex-col gap-4">
+              
+                      <!-- Parent Accordion -->
+                      <div class="accordion-item bg-white rounded-2xl border border-slate-300 overflow-hidden">
+                        <button type="button" class="accordion-header flex px-6 py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                          <span class="text-xl font-medium">What is a nested accordion?</span>
+                          <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                          </span>
+                        </button>
+                        <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                          <div class="p-6">
+                            <p class="pb-5">A nested accordion allows sections to expand and collapse, with each section potentially containing its own nested accordion.</p>
+                            
+                            <!-- Nested Accordion -->
+                            <div class="accordion flex flex-col">
+                              <div class="accordion-item border-b border-slate-200">
+                                <button type="button" class="accordion-header flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                                  <span class="text-lg font-medium">How do I set up TailwindCSS?</span>
+                                  <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                  </span>
+                                </button>
+                                <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                                  <div class="pb-5">
+                                    <p>Include the TailwindCSS CDN link in your project for quick utility styling.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item border-b border-slate-200">
+                                <button type="button" class="accordion-header flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                                  <span class="text-lg font-medium">How to structure HTML for nested accordions?</span>
+                                  <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                  </span>
+                                </button>
+                                <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                                  <div class="pb-5">
+                                    <p>Use a parent container and nest child accordion sections inside the content area.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- End Nested Accordion -->
+                          </div>
+                        </div>
+                      </div>
+              
+                      <!-- Parent Accordion Item 2 -->
+                      <div class="accordion-item bg-white rounded-2xl border border-slate-300 overflow-hidden">
+                        <button type="button" class="accordion-header flex px-6 py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                          <span class="text-xl font-medium">How do I add animations?</span>
+                          <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                            <i class="fa-solid fa-chevron-down"></i>
+                          </span>
+                        </button>
+                        <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                          <div class="p-6">
+                            <p>You can use Tailwind's transition utilities for smooth expand/collapse animations.</p>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </section>
               
 
             </div>
@@ -310,6 +352,9 @@
     </footer>
 
     <script src="../scripts/js/open-modals-on-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+
     <!-- Custom Scripts -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
@@ -342,7 +387,29 @@
         menuClose.addEventListener('click', closeDrawer);
         menuOverlay.addEventListener('click', closeDrawer);
 
-        // side bar
+        document.addEventListener("DOMContentLoaded", () => {
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", () => {
+        const parent = header.parentElement;
+        const content = parent.querySelector(".accordion-collapse");
+
+        // Toggle active state
+        parent.classList.toggle("active");
+        header.classList.toggle("group-[.active]");
+
+        // Expand/Collapse logic
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  });
+
+  
 
 
         
