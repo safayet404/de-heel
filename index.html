@@ -9,6 +9,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
    <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="carousel.scss">
+  
+  
 </head>
 
 <body class="relative">
@@ -409,6 +413,64 @@
       </div>
     </div>
 
+
+    <div class="py-10 max-w-[1200px] mx-auto">
+      <h1 class="text-center mt-5 mb-5 font-bold text-2xl md:text-4xl">Achievement</h1>
+      <section class="my-10">
+       
+        <section class="carousel-3D-swiper-section">
+          <!-- Slider main container -->
+          <div class="carousel-3D-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" style="max-width: 1000px;">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                  <img class="aspect-video "  src="./assets/carousel.png" alt="">
+                </div>
+              
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                  <img class="aspect-video" src="./assets/carousel.png" alt="">
+                </div>
+               
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                  <img class="aspect-video" src="./assets/carousel.png" alt="">
+                </div>
+            
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                  <img class="aspect-video" src="./assets/carousel.png" alt="">
+                </div>
+                
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                  <img class="aspect-video" src="./assets/carousel.png" alt="">
+                </div>
+               
+              </div>
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                  <img class="aspect-video" src="./assets/carousel.png" alt="">
+                </div>
+              
+              </div>
+            </div>
+            <!-- pagination -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            <div class="swiper-pagination" style="bottom: -50px;"></div>
+          </div>
+        </section>
+      </section>
+    </div>
+    
+
     <!--Branch Section -->
     <div class="py-10 max-w-[1400px] mx-auto">
 
@@ -677,6 +739,7 @@
 
 
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
@@ -741,6 +804,31 @@
       });
     });
 
+    document.addEventListener("DOMContentLoaded", () => {
+  const carousel3Dswiper = new Swiper(".carousel-3D-swiper", {
+        loop: true,
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 4,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 350,
+          modifier: 1,
+          slideShadows: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        
+      });
+    });
 
   </script>
 </body>
