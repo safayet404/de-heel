@@ -1,118 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Achievements</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Heel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+/>
 </head>
-<body class="bg-white">
 
-<!-- Achievements Section -->
-<section class="py-10">
-  <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
-    <img src="https://play.tailwindcss.com/img/beams.jpg" alt="" class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2" width="1308" />
-    <div class="absolute inset-0 bg-[url(https://play.tailwindcss.com/img/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-
-    <div class="max-w-[900px] mx-auto py-20 px-4 relative z-10">
-      <h1 class="text-center pb-12 text-4xl font-medium text-blue-600">JavaScript Nested Accordion Using TailwindCSS</h1>
-      <div class="accordion flex flex-col gap-4">
-
-        <!-- Parent Accordion -->
-        <div class="accordion-item bg-white rounded-2xl border border-slate-300 overflow-hidden">
-          <button type="button" class="accordion-header flex px-6 py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
-            <span class="text-xl font-medium">What is a nested accordion?</span>
-            <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </button>
-          <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
-            <div class="p-6">
-              <p class="pb-5">A nested accordion allows sections to expand and collapse, with each section potentially containing its own nested accordion.</p>
-              
-              <!-- Nested Accordion -->
-              <div class="accordion flex flex-col">
-                <div class="accordion-item border-b border-slate-200">
-                  <button type="button" class="accordion-header flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
-                    <span class="text-lg font-medium">How do I set up TailwindCSS?</span>
-                    <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                  </button>
-                  <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
-                    <div class="pb-5">
-                      <p>Include the TailwindCSS CDN link in your project for quick utility styling.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border-b border-slate-200">
-                  <button type="button" class="accordion-header flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
-                    <span class="text-lg font-medium">How to structure HTML for nested accordions?</span>
-                    <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                  </button>
-                  <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
-                    <div class="pb-5">
-                      <p>Use a parent container and nest child accordion sections inside the content area.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Nested Accordion -->
+<body class="relative bg-white dark:bg-white">
+    <!-- Header -->
+    <header id="navbar" class="bg-gray-800 bg-opacity-70 text-white fixed w-full top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="\assets\Shoes.png" alt="Logo" class="w-[129px] h-[39px] object-contain mr-3">
             </div>
-          </div>
-        </div>
 
-        <!-- Parent Accordion Item 2 -->
-        <div class="accordion-item bg-white rounded-2xl border border-slate-300 overflow-hidden">
-          <button type="button" class="accordion-header flex px-6 py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
-            <span class="text-xl font-medium">How do I add animations?</span>
-            <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
-          </button>
-          <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
-            <div class="p-6">
-              <p>You can use Tailwind's transition utilities for smooth expand/collapse animations.</p>
+            <!-- Menu (Desktop) -->
+            <nav class="hidden md:flex space-x-6 uppercase">
+              <a href="index.html" class="hover:text-gray-300 ">Home</a>
+              <a href="about.html" class="hover:text-gray-300">About US</a>
+              <a href="#" class="hover:text-gray-300">Complance</a>
+              <a href="products.html" class="hover:text-gray-300">Products</a>
+              <a href="blog.html" class="hover:text-gray-300">Blog</a>
+              <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+            </nav>
+
+            <!-- Icons and Hamburger -->
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-gray-300">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <button class="hover:text-gray-300">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+                <button id="menu-toggle" class="md:hidden hover:text-gray-300 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
             </div>
-          </div>
         </div>
+    </header>
 
-      </div>
+    <!-- Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+    <!-- Sliding Menu Drawer -->
+    <div id="menu-drawer"
+        class="fixed right-0 w-64 bg-gray-800 bg-opacity-70 transform translate-x-full transition-transform duration-300 ease-in-out z-50 rounded-tl-lg rounded-bl-lg">
+        <div class="p-4 text-white">
+            <button id="menu-close" class="hover:text-gray-300 focus:outline-none mb-4">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <nav class="flex flex-col space-y-4">
+              <a href="index.html" class="hover:text-gray-300 ">Home</a>
+              <a href="about.html" class="hover:text-gray-300">About US</a>
+              <a href="#" class="hover:text-gray-300">Complance</a>
+              <a href="products.html" class="hover:text-gray-300">Products</a>
+              <a href="blog.html" class="hover:text-gray-300">Blog</a>
+              <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+            </nav>
+        </div>
     </div>
-  </div>
-</section>
 
-<!-- JavaScript for Accordion -->
-<script>
-  
+    <!-- Banner -->
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    <main class="max-w-[1400px] mx-auto">
 
-    accordionHeaders.forEach((header) => {
-      header.addEventListener("click", () => {
-        const parent = header.parentElement;
-        const content = parent.querySelector(".accordion-collapse");
+        <div class="grid grid-cols-12 gap-10">
+            <div class="col-span-3 flex flex-col mt-[200px] shadow-md rounded-lg mx-auto space-y-20 my-auto">
+              <section>
+                <div class="relative flex min-h-screen flex-col overflow-hidden  py-6 sm:py-12">
+              
+                  <div class="max-w-[900px] mx-auto px-4 relative z-10">
+                    <div class="accordion flex flex-col gap-4">
+              
+                      <!-- Parent Accordion -->
+                      <div class="accordion-item bg-white rounded-2xl overflow-hidden">
+                        <button type="button" class="accordion-header flex px-6 py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                          <span class="text-xl font-medium text-black">Lather</span>
+                          <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-black"></i>
+                          </span>
+                        </button>
+                        <div class="accordion-collapse  overflow-hidden transition-all duration-300">
+                          <div class="p-6">
+                            
+                            <!-- Nested Accordion -->
+                            <div class="accordion flex flex-col">
+                              <div class="accordion-item border-b border-slate-200">
+                                <button type="button" class="accordion-header flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                                  <span class="text-lg font-medium">Man</span>
+                                  <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                  </span>
+                                </button>
+                                <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                                  <div class="pb-5">
+                                    <p>Include the TailwindCSS CDN link in your project for quick utility styling.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item border-b border-slate-200">
+                                <button type="button" class="accordion-header flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                                  <span class="text-lg font-medium">Woman</span>
+                                  <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                  </span>
+                                </button>
+                                <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                                  <div class="pb-5">
+                                    <p>Use a parent container and nest child accordion sections inside the content area.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion flex flex-col">
+                              <div class="accordion-item border-b border-slate-200">
+                                <button type="button" class="accordion-header  flex py-4 justify-between gap-4 items-center w-full group transition-all duration-300 ease-in-out">
+                                  <span class="text-lg font-medium">Kids</span>
+                                  <span class="shrink-0 text-2xl transition-transform duration-300 group-[.active]:rotate-180">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                  </span>
+                                </button>
+                                <div class="accordion-collapse max-h-0 overflow-hidden transition-all duration-300">
+                                  <div class="pb-5 flex flex-col justify-end items-end">
+                                    <div class="bg-[#D3E6D9] w-2/3 p-5 rounded-md text-black">
+                                      <p>Shoes</p>
+                                      <p>Sleeper</p>
+                                      <p>Comfy</p>
+                                      <p>Sports Shoes</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                            </div>
 
-        // Toggle active state
-        parent.classList.toggle("active");
-        header.classList.toggle("group-[.active]");
+                            
+                           
+                            <!-- End Nested Accordion -->
+                          </div>
+                        </div>
+                      </div>
+              
+                   
+              
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
 
-        // Expand/Collapse logic
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      });
+            </div>
+            <div class="col-span-8 mt-[110px]">
+               <h1 class="text-center font-bold text-4xl text-black">Category</h1>
+
+               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                <!-- Product Card 1 -->
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                  <div class="relative">
+                    <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+                  </div>
+                  <div class="p-4 bg-[#D3E6D8]">
+                    <h3 class="text-lg font-semibold">Man shoes</h3>
+                    <div class="flex justify-between relative">
+        
+                      <p class="text-gray-600 text-sm">Man shoes</p>
+                      <p class="text-gray-600 text-sm">$110</p>
+                      <button class="text-green-500 absolute top-[-60px] right-0">
+                        <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                        <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                      </button>
+                    </div>
+        
+                  </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                  <div class="relative">
+                    <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+                  </div>
+                  <div class="p-4 bg-[#D3E6D8]">
+                    <h3 class="text-lg font-semibold">Man shoes</h3>
+                    <div class="flex justify-between relative">
+        
+                      <p class="text-gray-600 text-sm">Man shoes</p>
+                      <p class="text-gray-600 text-sm">$110</p>
+                      <button class="text-green-500 absolute top-[-60px] right-0">
+                        <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                        <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                      </button>
+                    </div>
+        
+                  </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                  <div class="relative">
+                    <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+                  </div>
+                  <div class="p-4 bg-[#D3E6D8]">
+                    <h3 class="text-lg font-semibold">Man shoes</h3>
+                    <div class="flex justify-between relative">
+        
+                      <p class="text-gray-600 text-sm">Man shoes</p>
+                      <p class="text-gray-600 text-sm">$110</p>
+                      <button class="text-green-500 absolute top-[-60px] right-0">
+                        <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                        <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                      </button>
+                    </div>
+        
+                  </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                  <div class="relative">
+                    <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+                  </div>
+                  <div class="p-4 bg-[#D3E6D8]">
+                    <h3 class="text-lg font-semibold">Man shoes</h3>
+                    <div class="flex justify-between relative">
+        
+                      <p class="text-gray-600 text-sm">Man shoes</p>
+                      <p class="text-gray-600 text-sm">$110</p>
+                      <button class="text-green-500 absolute top-[-60px] right-0">
+                        <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                        <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                      </button>
+                    </div>
+        
+                  </div>
+                </div>
+
+                
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                  <div class="relative">
+                    <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+                  </div>
+                  <div class="p-4 bg-[#D3E6D8]">
+                    <h3 class="text-lg font-semibold">Man shoes</h3>
+                    <div class="flex justify-between relative">
+        
+                      <p class="text-gray-600 text-sm">Man shoes</p>
+                      <p class="text-gray-600 text-sm">$110</p>
+                      <button class="text-green-500 absolute top-[-60px] right-0">
+                        <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                        <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                      </button>
+                    </div>
+        
+                  </div>
+                </div>
+
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                  <div class="relative">
+                    <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[350px] object-cover">
+                    <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+                  </div>
+                  <div class="p-4 bg-[#D3E6D8]">
+                    <h3 class="text-lg font-semibold">Man shoes</h3>
+                    <div class="flex justify-between relative">
+        
+                      <p class="text-gray-600 text-sm">Man shoes</p>
+                      <p class="text-gray-600 text-sm">$110</p>
+                      <button class="text-green-500 absolute top-[-60px] right-0">
+                        <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                        <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                      </button>
+                    </div>
+        
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-[#1E1E1E] text-white py-10 mt-[200px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1400px] mx-auto">
+            <div class="mx-auto w-full">
+                <h1 class="text-4xl font-bold mt-5 tracking-widest">SHOES</h1>
+                <p class="w-[70%] leading-loose mt-5">The proper Footer on proper time can preserve you protection. We
+                    assist you make sureeverybody forward.</p>
+
+                <ul class="flex  flex-row gap-5 mt-5">
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/fb.png" /></a> </li>
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/twitter.png" /></a> </li>
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/instagram.png" /></a> </li>
+                    <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/youtube.png" /></a> </li>
+                </ul>
+            </div>
+
+            <div class="mx-auto">
+                <h1 class="font-semibold text-3xl">Quick Link</h1>
+                <ul class="mt-5 space-y-3">
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Home </a> </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> About US </a>
+                    </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Complance </a>
+                    </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Products </a>
+                    </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Blog </a> </li>
+                    <li class="text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Contact </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto w-full">
+                <h1 class="font-semibold text-4xl">Recent News</h1>
+                <div class="grid grid-cols-12 gap-5 mt-5">
+                    <div class="col-span-4">
+                        <img src="./assets/meeting.png" class="rounded-lg shadow-md" />
+                    </div>
+                    <div class="col-span-8">
+                        <h1 class="font-bold text-2xl">People saying about footer.</h1>
+                        <p class="mt-2">8 Nov, 2021</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-5 mt-5">
+                    <div class="col-span-4">
+                        <img src="./assets/meeting.png" class="rounded-lg shadow-md" />
+                    </div>
+                    <div class="col-span-8">
+                        <h1 class="font-bold text-2xl">People saying about footer.</h1>
+                        <p class="mt-2">8 Nov, 2021</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-gray-600 border-t-2 mt-5 mb-3 w-full" />
+        <p class="text-center mx-auto">&copy; 2023 All rights reserved</p>
+    </footer>
+
+    <script src="../scripts/js/open-modals-on-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const menuDrawer = document.getElementById('menu-drawer');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const navbar = document.getElementById('navbar');
+
+        // Adjust drawer position below the navbar
+        const adjustDrawerPosition = () => {
+            const navbarHeight = navbar.offsetHeight;
+            menuDrawer.style.top = `${navbarHeight}px`;
+        };
+
+        window.addEventListener('resize', adjustDrawerPosition);
+        window.addEventListener('load', adjustDrawerPosition);
+
+        // Open Drawer
+        menuToggle.addEventListener('click', () => {
+            menuDrawer.classList.remove('translate-x-full');
+            menuOverlay.classList.remove('hidden');
+        });
+
+        // Close Drawer on Close Button or Overlay Click
+        const closeDrawer = () => {
+            menuDrawer.classList.add('translate-x-full');
+            menuOverlay.classList.add('hidden');
+        };
+
+        menuClose.addEventListener('click', closeDrawer);
+        menuOverlay.addEventListener('click', closeDrawer);
+
+        document.addEventListener("DOMContentLoaded", () => {
+  const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+  accordionHeaders.forEach((header) => {
+    header.addEventListener("click", (event) => {
+      event.stopPropagation(); // Stop propagation to prevent nested interference
+
+      const parent = header.parentElement; // Current accordion-item
+      const content = parent.querySelector(":scope > .accordion-collapse"); // Only immediate content
+
+      // Toggle active state
+      parent.classList.toggle("active");
+
+      // Rotate icon (Tailwind class toggle)
+      const icon = header.querySelector("i");
+      if (icon) icon.classList.toggle("rotate-180");
+
+      // Expand/Collapse logic
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null; // Collapse
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px"; // Expand
+      }
     });
   });
+});
 
-  
-</script>
+
+        
+
+
+
+    </script>
 </body>
+
 </html>
