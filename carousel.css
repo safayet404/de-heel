@@ -1,0 +1,18 @@
+.swiper-slide {
+    transition: transform 0.3s ease, height 0.3s ease, width 0.3s ease;
+  }
+  
+  .swiper-slide.active-slide {
+    transform: scale(1.2); /* Scale the active slide */
+    z-index: 10; /* Bring it above others */
+  }
+  
+  .swiper-slide img {
+    transition: transform 0.3s ease, height 0.3s ease, width 0.3s ease;
+  }
+  
+  .swiper-slide.active-slide img {
+    height: 120%; /* Increase height */
+    width: 120%; /* Increase width */
+  }
+  
