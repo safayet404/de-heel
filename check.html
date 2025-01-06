@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Heel</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body class="relative">
+  <!-- Header -->
+  <header id="navbar" class="bg-gray-800 bg-opacity-70 text-white fixed w-full top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="\assets\Shoes.png" alt="Logo" class="w-[129px] h-[39px] object-contain mr-3">
+      </div>
+
+      <!-- Menu (Desktop) -->
+      <nav class="hidden md:flex space-x-6 uppercase">
+        <a href="index.html" class="hover:text-gray-300 ">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About US</a>
+        <a href="#" class="hover:text-gray-300">Compliance</a>
+        <a href="products.html" class="hover:text-gray-300">Products</a>
+        <a href="blog.html" class="hover:text-gray-300">Blog</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+      </nav>
+
+      <!-- Icons and Hamburger -->
+      <div class="flex items-center space-x-4">
+        <button class="hover:text-gray-300">
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <button class="hover:text-gray-300">
+          <i class="fa-solid fa-phone"></i>
+        </button>
+        <button id="menu-toggle" class="md:hidden hover:text-gray-300 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <!-- Sliding Menu Drawer -->
+  <div id="menu-drawer"
+    class="fixed right-0 w-64 bg-gray-800 bg-opacity-70 transform translate-x-full transition-transform duration-300 ease-in-out z-50 rounded-tl-lg rounded-bl-lg">
+    <div class="p-4 text-white">
+      <button id="menu-close" class="hover:text-gray-300 focus:outline-none mb-4">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+      <nav class="flex flex-col space-y-4">
+        <a href="index.html" class="hover:text-gray-300 ">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About US</a>
+        <a href="#" class="hover:text-gray-300">Compliance</a>
+        <a href="products.html" class="hover:text-gray-300">Products</a>
+        <a href="blog.html" class="hover:text-gray-300">Blog</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <section class="relative bg-cover bg-center h-auto bg-[url(./assets/bg.png)]">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="relative z-10  flex flex-col  justify-start max-w-[1500px]  mx-auto text-white h-full space-y-6 px-4">
+      <h2 class="text-3xl md:text-5xl font-bold uppercase mt-[150px]">SHOES LTD</h2>
+      <p class="max-w-3xl leading-loose text-lg md:text-base">
+        100% EXPORT ORIENTED QUALITY SHOE MANUFACTURING INDUSTRY IN BANGLADESH
+        EXPORT TO FRANCE, SPAIN, BRAZIL, JAPAN AND OTHER EU COUNTRIES.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl w-full mt-6 mb-5 ">
+        <div class="flex flex-col mb-10 p-6 bg-green-50 rounded-lg shadow-lg">
+          <p class="text-gray-800 text-center font-semibold">
+            Fixed an appointment for live factory visit via video conference
+          </p>
+          <img src="./assets/gp1.png" class="w-[80px] mt-5 h-[80px] mx-auto" />
+        </div>
+        <div class="flex flex-col mb-10 p-6 bg-green-50 rounded-lg shadow-lg">
+          <p class="text-gray-800 text-center font-semibold">
+            Fixed an appointment for live factory visit via video conference
+          </p>
+          <img src="./assets/gp2.png" class="w-[80px] mt-5 h-[80px] mx-auto" />
+        </div>
+        <div class="flex flex-col mb-10 p-6 bg-green-50 rounded-lg shadow-lg">
+          <p class="text-gray-800 text-center font-semibold">
+            Fixed an appointment for live factory visit via video conference
+          </p>
+          <img src="./assets/gp3.png" class="w-[80px] mt-5 h-[80px] mx-auto" />
+        </div>
+      </div>
+
+    </div>
+    <!-- <div class="p-8 text-white max-w-[1400px] mx-auto  ">
+      <h1 class="mt-[200px] font-bold text-5xl">SHOES LTD</h1>
+      <p>Additional content will ensure the section grows in height.</p>
+    </div> -->
+  </section>
+
+  <main class="mx-auto p-4">
+
+
+    <!-- Latest Product -->
+
+    <div class="py-10 max-w-[1200px] grid grid-cols-12 mx-auto">
+
+      <div class="col-span-12 md:col-span-4">
+        <h1>Category</h1>
+      </div>
+      <div class="col-span-12 md:col-span-8">
+        <h2 class="text-lg text-center md:text-4xl font-bold mb-8 " >Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product Card 1 -->
+          <div class="rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[250px] object-cover">
+              <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+            </div>
+            <div class="p-4 bg-[#D3E6D8]">
+              <h3 class="text-lg font-semibold">Man shoes</h3>
+              <div class="flex justify-between relative">
+  
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+                <button class="text-green-500 absolute top-[-60px] right-0">
+                  <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                  <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                </button>
+              </div>
+  
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[250px] object-cover">
+              <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+            </div>
+            <div class="p-4 bg-[#D3E6D8]">
+              <h3 class="text-lg font-semibold">Man shoes</h3>
+              <div class="flex justify-between relative">
+  
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+                <button class="text-green-500 absolute top-[-60px] right-0">
+                  <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                  <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                </button>
+              </div>
+  
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[250px] object-cover">
+              <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+            </div>
+            <div class="p-4 bg-[#D3E6D8]">
+              <h3 class="text-lg font-semibold">Man shoes</h3>
+              <div class="flex justify-between relative">
+  
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+                <button class="text-green-500 absolute top-[-60px] right-0">
+                  <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                  <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                </button>
+              </div>
+  
+            </div>
+          </div>
+          <!-- Product Card 4 -->
+          <div class="rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="./assets/shoe3.png" alt="Product Image" class="w-full h-[250px] object-cover">
+              <span class="absolute top-0 right-0 bg-green-500 text-white text-xs px-4 py-1 rounded-full">MOQ</span>
+            </div>
+            <div class="p-4 bg-[#D3E6D8]">
+              <h3 class="text-lg font-semibold">Man shoes</h3>
+              <div class="flex justify-between relative">
+  
+                <p class="text-gray-600 text-sm">Man shoes</p>
+                <p class="text-gray-600 text-sm">$110</p>
+                <button class="text-green-500 absolute top-[-60px] right-0">
+                  <i class="fa-solid fa-cart-shopping border-4 relative border-white bg-[#D3E6D8] rounded-full p-3"></i>
+                  <span class="absolute right-1 bg-red-700 rounded-full text-sm text-white px-1">5</span>
+                </button>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </main>
+
+  
+
+
+<!-- Footer Section -->
+  <footer class="bg-[#1E1E1E] text-white py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1400px] p-5 space-y-5 mx-auto">
+      <div class="mx-auto  w-full">
+        <h1 class="text-4xl font-bold mt-5 tracking-widest">SHOES</h1>
+        <p class="w-[70%] leading-loose mt-5">The proper Footer on proper time can preserve you protection. We assist you make sureeverybody forward.</p>
+       
+          <ul class="flex flex-row gap-5 mt-5">
+            <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/fb.png" /></a> </li>
+            <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/twitter.png" /></a> </li>
+            <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/instagram.png" /></a> </li>
+            <li class="bg-white p-3 rounded-full"> <a href="#"> <img src="./assets/youtube.png" /></a> </li>
+          </ul>
+      </div>
+
+      <div class="md:mx-auto">
+        <h1 class="font-semibold text-lg md:text-3xl">Quick Link</h1>
+        <ul class="mt-5 space-y-3">
+          <li class="text-base md:text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Home </a> </li>
+          <li class="text-base md:text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> About US </a> </li>
+          <li class="text-base md:text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Complance </a> </li>
+          <li class="text-base md:text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Products </a> </li>
+          <li class="text-base md:text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Blog </a> </li>
+          <li class="text-base md:text-xl"> <a href="#"> <span class="text-[#59B55E] font-bold">&gt;</span> Contact </a> </li>
+        </ul>
+      </div>
+      <div class="mx-auto w-full">
+        <h1 class="font-semibold text-xl md:text-4xl">Recent News</h1>
+        <div class="grid grid-cols-12 gap-5 mt-5">
+          <div class="col-span-4">
+            <img src="./assets/meeting.png" class="rounded-lg shadow-md" />
+          </div>
+          <div class="col-span-8">
+            <h1 class="font-bold text-lg sm:text-2xl">People saying about footer.</h1>
+            <p class="mt-2">8 Nov, 2021</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-12 gap-5 mt-5">
+          <div class="col-span-4">
+            <img src="./assets/meeting.png" class="rounded-lg shadow-md" />
+          </div>
+          <div class="col-span-8">
+            <h1 class="font-bold text-lg sm:text-2xl">People saying about footer.</h1>
+            <p class="mt-2">8 Nov, 2021</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  
+    <hr class="border-gray-600 border-t-2 mt-5 mb-3 w-full" />
+    <p class="text-center mx-auto">&copy; 2023 All rights reserved</p>
+  </footer>
+
+  <!-- Custom Scripts -->
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const menuDrawer = document.getElementById('menu-drawer');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const navbar = document.getElementById('navbar');
+
+    // Adjust drawer position below the navbar
+    const adjustDrawerPosition = () => {
+      const navbarHeight = navbar.offsetHeight;
+      menuDrawer.style.top = `${navbarHeight}px`;
+    };
+
+    window.addEventListener('resize', adjustDrawerPosition);
+    window.addEventListener('load', adjustDrawerPosition);
+
+    // Open Drawer
+    menuToggle.addEventListener('click', () => {
+      menuDrawer.classList.remove('translate-x-full');
+      menuOverlay.classList.remove('hidden');
+    });
+
+    // Close Drawer on Close Button or Overlay Click
+    const closeDrawer = () => {
+      menuDrawer.classList.add('translate-x-full');
+      menuOverlay.classList.add('hidden');
+    };
+
+    menuClose.addEventListener('click', closeDrawer);
+    menuOverlay.addEventListener('click', closeDrawer);
+
+    // Handle opening the modal
+    document.querySelectorAll('[data-dialog-target]').forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-dialog-target');
+        const backdrop = document.querySelector(`[data-dialog-backdrop="${modalId}"]`);
+        if (backdrop) {
+          backdrop.classList.remove('pointer-events-none', 'opacity-0');
+          backdrop.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      });
+    });
+
+    // Handle closing the modal
+    document.querySelectorAll('[data-dialog-close]').forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('[data-dialog-backdrop]');
+        if (modal) {
+          modal.classList.add('pointer-events-none', 'opacity-0');
+          modal.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+      });
+    });
+
+    // Close modal when clicking on the backdrop
+    document.querySelectorAll('[data-dialog-backdrop-close="true"]').forEach(backdrop => {
+      backdrop.addEventListener('click', event => {
+        if (event.target === backdrop) {
+          backdrop.classList.add('pointer-events-none', 'opacity-0');
+          backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+        }
+      });
+    });
+
+
+    var testiomnialData = [
+    {
+        avatar: "https://img.freepik.com/free-photo/woman-with-long-hair-yellow-hoodie-with-word-music-it_1340-39068.jpg",
+     
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg",
+       
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/handsome-african-guy-with-stylish-haircut-taking-photo-digital-camera_171337-1345.jpg",
+       
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg",
+        
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+       
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+      
+    }, {
+        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+        
+    }]
+var slideHolder = document.querySelector("#slideHolder")
+for (let i of testiomnialData) slideHolder.innerHTML += `<div class="swiper-slide"> <div class="ImgHolder"><img src="${i.avatar}"></div>`
+
+const swiper = new Swiper('#craouselContainer', {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 2.3,
+    loop: true,
+    spaceBetween: 30,
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: 0,
+        depth: 800,
+        slideShadows: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    autoplay: { delay: 500 }
+});
+window.onresize = queryResizer
+queryResizer()
+function queryResizer() {
+    if (window.innerWidth < 724) swiper.params.slidesPerView = 2
+    if (window.innerWidth > 501) swiper.params.slidesPerView = 2
+    if (window.innerWidth > 724) swiper.params.slidesPerView = 2.3
+    if (window.innerWidth < 501) swiper.params.slidesPerView = 1
+    swiper.update()
+}
+
+
+  </script>
+</body>
+
+</html>

@@ -414,55 +414,14 @@
       <h1 class="text-center mt-5 mb-5 font-bold text-2xl md:text-4xl">Achievement</h1>
       <section class="my-10">
        
-        <section class="carousel-3D-swiper-section">
-          <!-- Slider main container -->
-          <div class="carousel-3D-swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper" style="max-width: 1000px;">
+        <div id="craouselContainer" class="swiper-container">
+          <div class="swiper-wrapper" id="slideHolder">
               <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                  <img class="aspect-video h-[350px]"  src="./assets/carousel.png" alt="">
-                </div>
-              
-              </div>
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                  <img class="aspect-video h-[350px]" src="./assets/carousel.png" alt="">
-                </div>
-               
-              </div>
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                  <img class="aspect-video h-[350px]" src="./assets/carousel.png" alt="">
-                </div>
-            
-              </div>
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                  <img class="aspect-video h-[350px]" src="./assets/carousel.png" alt="">
-                </div>
-                
-              </div>
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                  <img class="aspect-video h-[350px]" src="./assets/carousel.png" alt="">
-                </div>
-               
-              </div>
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                  <img class="aspect-video h-[350px]" src="./assets/carousel.png" alt="">
-                </div>
-              
-              </div>
-            </div>
-            <!-- pagination -->
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
-            <div class="swiper-pagination" style="bottom: -50px;"></div>
+  
           </div>
-        </section>
+          <div class="swiper-pagination"></div>
+          
+      </div>
       </section>
     </div>
     
@@ -800,31 +759,66 @@
       });
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-    const carousel3Dswiper = new Swiper(".carousel-3D-swiper", {
-        loop: true,
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 4,
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 350,
-          modifier: 1,
-          slideShadows: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+
+    var testiomnialData = [
+    {
+        avatar: "https://img.freepik.com/free-photo/woman-with-long-hair-yellow-hoodie-with-word-music-it_1340-39068.jpg",
+     
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg",
+       
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/handsome-african-guy-with-stylish-haircut-taking-photo-digital-camera_171337-1345.jpg",
+       
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg",
         
-      });
-    });
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+       
+    },
+    {
+        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+      
+    }, {
+        avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+        
+    }]
+var slideHolder = document.querySelector("#slideHolder")
+for (let i of testiomnialData) slideHolder.innerHTML += `<div class="swiper-slide"> <div class="ImgHolder"><img src="${i.avatar}"></div>`
+
+const swiper = new Swiper('#craouselContainer', {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 2.3,
+    loop: true,
+    spaceBetween: 30,
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: 0,
+        depth: 800,
+        slideShadows: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    autoplay: { delay: 500 }
+});
+window.onresize = queryResizer
+queryResizer()
+function queryResizer() {
+    if (window.innerWidth < 724) swiper.params.slidesPerView = 2
+    if (window.innerWidth > 501) swiper.params.slidesPerView = 2
+    if (window.innerWidth > 724) swiper.params.slidesPerView = 2.3
+    if (window.innerWidth < 501) swiper.params.slidesPerView = 1
+    swiper.update()
+}
+
 
   </script>
 </body>
